@@ -14,6 +14,20 @@
 <body>
   <h2>Welcome</h2>
   <div id="HelloMessage"></div>
-  <script></script>
+  <script>
+    var query = new URLSearchParams;
+    query.append("name", "Jason");
+    var url = "[UPDATE_AFTER_DEPLOYMENT]?" + query.toString() ;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    
+    xhr.onload = function(){
+      console.log("Done");
+      document.getElementById("HelloMessage").innerHTML = this.response;
+    };
+    
+    xhr.send();
+  </script>
 </body>
 </html>
