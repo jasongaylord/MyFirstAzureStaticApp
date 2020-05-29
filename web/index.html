@@ -17,7 +17,7 @@
   <script>
     var query = new URLSearchParams;
     query.append("name", "Jason");
-    var url = "[UPDATE_AFTER_DEPLOYMENT]?" + query.toString() ;
+    var url = "/api/welcome?" + query.toString() ;
     
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
