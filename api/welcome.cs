@@ -10,11 +10,11 @@ using Newtonsoft.Json;
 
 namespace api
 {
-    public static class name_get
+    public static class welcome
     {
-        [FunctionName("name_get")]
+        [FunctionName("welcome")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
